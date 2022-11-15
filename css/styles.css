@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+	--Cyan: hsl(179, 62%, 43%);
+	--CyanWhite: hsl(179, 47%, 52%);
+	--BrightYellow: hsl(71, 73%, 54%);
+	--LightGray: hsl(204, 43%, 93%);
+	--GrayishBlue: hsl(218, 22%, 67%);
+}
+/* font size 16px */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "Karla", sans-serif;
+	font-size: 1.6rem;
+	color: var(--LightGray);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--LightGray);
+}
+.container {
+	max-width: 640px;
+	box-sizing: border-box;
+}
+.container,
+.left-container button {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 1px 1px 5px gray;
+}
+.component {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: "header header" "left right";
+	background-color: white;
+	min-height: 480px;
+}
+.header {
+	grid-area: header;
+}
+.left-container {
+	grid-area: left;
+	background-color: var(--Cyan);
+}
+.right-container {
+	grid-area: right;
+	background-color: var(--CyanWhite);
+}
+.header,
+.left-container,
+.right-container {
+	padding: 30px;
+}
+li {
+	list-style-type: none;
+	font-size: 1.5rem;
+	line-height: 2.3rem;
+}
+h1 {
+	color: var(--Cyan);
+	font-size: 2.5rem;
+	line-height: 2rem;
+}
+div .header > h2 {
+	color: var(--BrightYellow);
+	font-size: 1.9rem;
+}
+div .header > p {
+	color: var(--GrayishBlue);
+	line-height: 3rem;
+}
+.left-container > h2,
+.right-container > h2 {
+	font-size: 2rem;
+}
+.header h2,
+.left-container > #price_tag {
+	margin: 20px 0;
+}
+.left-container > #price_tag {
+	font-size: 3rem;
+}
+.left-container > #price_tag span {
+	font-size: 1.5rem;
+	margin-left: 15px;
+	color: #6cd7d5;
+}
+.left-container p {
+	font-size: 1.57rem;
+}
+.left-container button {
+	margin-top: 30px;
+	width: 100%;
+	padding: 15px;
+	background-color: var(--BrightYellow);
+	border: none;
+	color: var(--LightGray);
+	font-size: 1.7rem;
+}
+.right-container h2 {
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 560px) {
+	.container {
+		max-width: 320px;
+	}
+	.component {
+		grid-template-areas: "header header" "left left" "right right";
+	}
+}
