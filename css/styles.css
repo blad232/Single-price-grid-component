@@ -19,11 +19,12 @@ body {
 	font-family: "Karla", sans-serif;
 	font-size: 1.6rem;
 	color: var(--LightGray);
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--LightGray);
+	margin: 10px 0;
 }
 .container {
 	max-width: 640px;
