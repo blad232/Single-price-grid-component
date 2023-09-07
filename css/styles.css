@@ -5,6 +5,8 @@
 	--BrightYellow: hsl(71, 73%, 54%);
 	--LightGray: hsl(204, 43%, 93%);
 	--GrayishBlue: hsl(218, 22%, 67%);
+	--DarkGreen: hsl(71, 66%, 53%);
+	--LightGrayDark: hsl(205, 30%, 88%);
 }
 /* font size 16px */
 
@@ -112,7 +114,10 @@ div .header > p {
 .right-container h2 {
 	margin-bottom: 20px;
 }
-
+button:hover {
+	background-color: var(--DarkGreen);
+	color: var(--LightGrayDark);
+}
 @media screen and (max-width: 560px) {
 	.container {
 		max-width: 320px;
